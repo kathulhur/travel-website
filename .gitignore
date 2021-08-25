@@ -2,3 +2,4 @@
 node_modules
 
 # Put other files to exclude below
+coverage

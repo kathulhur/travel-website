@@ -1,6 +1,5 @@
 const express = require('express');
 const expressHandlebars = require('express-handlebars');
-var fortune = require('./lib/fortune.js');
 const app = express();
 
 // configure Handlebars view engine
@@ -31,9 +30,12 @@ app.use(handlers.notFound);
 app.use(handlers.serverError);
 
 
-
-app.listen (port, () => console.log(
-    `Express started on http://localhost:${port}; ` +
-    `press Ctrl-C to terminate.`
-    )
-);
+if(require.main === module) {
+    app.listen (port, () => console.log(
+        `Express started on http://localhost:${port}; ` +
+        `press Ctrl-C to terminate.`
+        )
+    );
+}else {
+    module.exports = app;
+}

@@ -4,7 +4,8 @@
   "description": "",
   "main": "meadowlark.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint meadowlark.js lib"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +14,9 @@
     "express-handlebars": "^5.3.3"
   },
   "devDependencies": {
-    "jest": "^27.0.6"
+    "eslint": "^7.32.0",
+    "jest": "^27.0.6",
+    "portfinder": "^1.0.28",
+    "puppeteer": "^10.2.0"
   }
 }
